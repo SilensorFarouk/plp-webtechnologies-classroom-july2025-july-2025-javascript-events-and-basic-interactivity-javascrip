@@ -1,0 +1,178 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+button {
+  background-color: #007acc;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #005fa3;
+  outline: none;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+#tabsSection {
+  margin-bottom: 3rem;
+}
+
+nav[role="tablist"] {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.tab-btn:hover,
+.tab-btn:focus {
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+  border-color: #007acc;
+  font-weight: 600;
+}
+
+.tab-panel {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007acc;
+  outline: none;
+}
+
+.error {
+  color: #d93025;
+  font-size: 0.875rem;
+  min-height: 1.2em;
+  margin-top: 0.25rem;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #188038;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode button {
+  background-color: #bb86fc;
+  color: #121212;
+}
+
+body.dark-mode button:hover,
+body.dark-mode button:focus {
+  background-color: #9a67ea;
+}
+
+body.dark-mode nav[role="tablist"] {
+  border-bottom-color: #444;
+}
+
+body.dark-mode .tab-panel {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"] {
+  background-color: #222;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode input[type="password"]:focus {
+  border-color: #bb86fc;
+}

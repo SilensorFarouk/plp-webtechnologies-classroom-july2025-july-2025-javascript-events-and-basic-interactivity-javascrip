@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Experience with Farouk</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Farouk's Page</h1>
+    <button id="modeToggle" aria-label="Toggle light/dark mode">Switch to Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Tabbed Interface -->
+    <section id="tabsSection" aria-label="Tabbed content section">
+      <h2>Explore Our Features</h2>
+      <nav role="tablist" aria-label="Sample Tabs">
+        <button role="tab" aria-selected="true" aria-controls="tab1" id="tab1-btn" tabindex="0" class="tab-btn active">About</button>
+        <button role="tab" aria-selected="false" aria-controls="tab2" id="tab2-btn" tabindex="-1" class="tab-btn">Features</button>
+        <button role="tab" aria-selected="false" aria-controls="tab3" id="tab3-btn" tabindex="-1" class="tab-btn">Contact</button>
+      </nav>
+      <article id="tab1" role="tabpanel" aria-labelledby="tab1-btn" class="tab-panel active">
+        <p>Welcome! This tab gives you an overview of how to use this webpage.</p>
+      </article>
+      <article id="tab2" role="tabpanel" aria-labelledby="tab2-btn" class="tab-panel" hidden>
+        <ul>
+          <li>Light/Dark Mode Switch for better viewing</li>
+          <li>Tabbed Navigation for quick access</li>
+          <li>Simple Registration Form with validation</li>
+        </ul>
+      </article>
+      <article id="tab3" role="tabpanel" aria-labelledby="tab3-btn" class="tab-panel" hidden>
+        <p>Need assistance? Email me at: <a href="mailto:silensorfarouk@gmail.com">silensorfarouk@gmail.com</a></p>
+      </article>
+    </section>
+
+    <!-- Form Section -->
+    <section id="formSection" aria-label="User registration form">
+      <h2>Register Now</h2>
+      <form id="registrationForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" />
+          <small class="error" id="fullNameError" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="emailAddress">Email Address</label>
+          <input type="email" id="emailAddress" name="emailAddress" autocomplete="email" />
+          <small class="error" id="emailError" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" />
+          <small class="error" id="passwordError" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="new-password" />
+          <small class="error" id="confirmPasswordError" aria-live="polite"></small>
+        </div>
+
+        <button type="submit">Create Account</button>
+        <p id="formMessage" role="alert" aria-live="assertive"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
